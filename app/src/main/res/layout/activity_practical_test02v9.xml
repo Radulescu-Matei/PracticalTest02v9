@@ -7,13 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".PracticalTest02MainActivityv9">
 
-    <TextView
+    <EditText
+        android:id="@+id/word_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter word"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/min_letters_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:hint="Minimum letters"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/word_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/request_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Get Anagrams"
+        app:layout_constraintTop_toBottomOf="@id/min_letters_input"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Results will appear here"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/request_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/map_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Map"
+        app:layout_constraintTop_toBottomOf="@id/request_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
